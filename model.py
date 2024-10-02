@@ -1,8 +1,8 @@
 from transformers import MllamaForConditionalGeneration, AutoProcessor
 import torch
+import gc
 
 from helpers import singleton
-
 
 @singleton
 class VLMModel():
@@ -16,6 +16,7 @@ class VLMModel():
         self.processor = AutoProcessor.from_pretrained(kwargs.get("model_id"))
 
     def generate(self, prompt, image):
+        self.model.to("cuda")
         messages = [
             {"role": "user", "content": [
                 {"type": "image"},
@@ -25,15 +26,21 @@ class VLMModel():
         input_text = self.processor.apply_chat_template(messages, add_generation_prompt=True)
         inputs = self.processor(image, input_text, return_tensors="pt").to(self.device)
 
-        output = self.model.generate(**inputs, max_new_tokens=500)
+        output = self.model.generate(**inputs, max_new_tokens=700)
         decoded_output =  self.processor.decode(output[0])[len(input_text)-1:]
-        return decoded_output.replace("end_header_id|>", "").replace("<|eot_id|>", "")
+        try:
+            self.model.to("cpu")
+        except exception as e:
+            print(e)
+        torch.cuda.empty_cache()
+        gc.collect()
+        return decoded_output.replace("|end_header_id|>", "").replace("<|eot_id|>", "")
     
 
-if __name__ == "__main__":
+"""if __name__ == "__main__":
     from PIL import Image
     image = Image.open("jar.png")
     prompt = "Write a title and a description for this image"
     model = VLMModel(model_id = "meta-llama/Llama-3.2-11B-Vision-Instruct")
     description = model.generate(prompt, image)
-    print(description)
+    print(description)"""

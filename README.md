@@ -3,7 +3,7 @@
 python3 -m venv mvenv
 source mvenv/bin/activate
 pip install -U pip
-pip install -r requirements
+pip install -r requirements.txt
 ```
 
 # Running the app
@@ -13,7 +13,7 @@ streamlit run app.py
 
 If you are running the app in a cloud environement make sure to create a tunel to access the streamlit app:
 ```
-npx localtunnel —port 8501
+npx localtunnel —-port 8501
 ```
 
 Then paste the puplic url (without the port number) into the passcode requested.
