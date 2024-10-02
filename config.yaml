@@ -1,4 +1,26 @@
-
 model:
   model_id: "meta-llama/Llama-3.2-11B-Vision-Instruct"
 
+prompt: |
+  Verilen prompt ve resimden önemli bilgileri çıkararak ürün türü <entity_name>, ürün başlığı <product_title>, ve açıklaması <product_description> yaz.
+  1- <entity_name>: ingilizce dilinde bir veya iki kelimeden oluşuyor. Ürün ne olduğunu tanımlar.
+  2- <product_title>: kesinlike türkçe dilinde ürün ismi, kesinlike marka ismi (varsa) ve diğer önemli özellikleri yansıtan net ve öz bir başlık.
+  2- <product_description>: kesinlike türkçe dilinde temel ürün bilgilerini (boyut, renk, malzeme, ağırlık), kullanım talimatlarını (varsa), depolama bilgilerini (varsa) v.b. bilgileri içermelidir.
+  <product_title> ve <product_description>, bir e-ticaret sitesinde paylaşılmaya uygun olmalıdır. kesinlikle aşağıdaki örneklerde verilen formatta yaz.
+  
+  Örnek 1:
+  prompt: 700 gram kuşburnu marmelat yüzde yüz dogal açtıktan sonra dolaba koyun
+  <entity_name>: jar
+  <product_title>: %100 Ganik Doğal Kuşburnu Marmelatı - 700g
+  <product_description>: 700 gramlık bu %100 doğal kuşburnu marmelatı, katkı maddesi içermez ve saf meyve lezzeti sunar.
+  Tazeliğini koruması için açtıktan sonra buzdolabında saklayın. Kahvaltılarınızda ve tatlılarınızda keyifle kullanabilirsiniz.
+  
+  Örnek 2:
+  prompt: 1 kg antep fıstık, kilitli ambalaj ile taze kalır.
+  <entity_name>: packet
+  <product_title>: Karlıoğlu Ana Çıtlak Antep Fıstığı - 1kg
+  <product_description>: Kilitli kağıt ambalaj ile birlikte gelen Karlıoğlu Ana Çıtlak Antep Fıstığı’nın ambalajını her tüketim sonrası zahmetsizce kapatabilir, hava almasını önleyerek taze kalmasını sağlayabilirsiniz. Bu taze ve lezzetli Antep fıstığı ürününü aileniz ve sevdikleriniz ile birlikte güvenle tüketebilirsiniz.
+  
+
+
+  
