@@ -8,6 +8,7 @@ pip install -r requirements.txt
 
 # Running the app
 ```
+cd app
 streamlit run app.py
 ```
 
@@ -15,8 +16,13 @@ If you are running the app in a cloud environement make sure to create a tunel t
 ```
 npx localtunnel —-port 8501
 ```
-
 Then paste the puplic url (without the port number) into the passcode requested.
+
+
+Or you can use ngrok to create a tunnel. You need to authenticate using your access token from ngrok and then you can run:
+```
+ngrok http 8501
+```
 
 
 # UI Examples
