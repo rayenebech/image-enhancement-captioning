@@ -1,3 +1,7 @@
+# Trendyol E-TICARET HACKATHON - Cogigators
+
+Uygulamanın demo'su [buradan](https://drive.google.com/file/d/1I2gzIf9gCa604z16SxNQbF4njK_opq1A/view?usp=sharing) izleyebilirsiniz
+
 # Installing the app
 ```
 python3 -m venv mvenv
