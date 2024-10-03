@@ -1,5 +1,6 @@
 accelerate
 pillow
 streamlit
-transformers
+streamlit-mic-recorder
 
+transformers

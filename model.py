@@ -26,7 +26,7 @@ class VLMModel():
         input_text = self.processor.apply_chat_template(messages, add_generation_prompt=True)
         inputs = self.processor(image, input_text, return_tensors="pt").to(self.device)
 
-        output = self.model.generate(**inputs, max_new_tokens=700)
+        output = self.model.generate(**inputs, max_new_tokens=700, min_p=0.1)
         decoded_output =  self.processor.decode(output[0])[len(input_text)-1:]
         try:
             self.model.to("cpu")
