@@ -1,7 +1,7 @@
 {
   "15": {
     "inputs": {
-      "image": "YOUR_PATH.png",
+      "image": "102682669-1721749093362.jpeg",
       "upload": "image"
     },
     "class_type": "LoadImage",
@@ -188,7 +188,7 @@
   },
   "48": {
     "inputs": {
-      "model_name": "RealESRGAN_x4plus.pth"
+      "model_name": "RealESRGAN_x2plus.pth"
     },
     "class_type": "UpscaleModelLoader",
     "_meta": {
@@ -260,12 +260,12 @@
   },
   "60": {
     "inputs": {
-      "seed": 18075065132903,
+      "seed": 157780610030514,
       "steps": 75,
       "cfg": 10,
       "sampler_name": "uni_pc_bh2",
       "scheduler": "normal",
-      "denoise": 0.95,
+      "denoise": 0.9,
       "model": [
         "63",
         0
@@ -372,6 +372,56 @@
     "class_type": "SaveImage",
     "_meta": {
       "title": "Save Image"
+    }
+  },
+  "77": {
+    "inputs": {
+      "image": "102682669-1721749093362.jpeg",
+      "upload": "image"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  },
+  "78": {
+    "inputs": {
+      "upscale_model": [
+        "48",
+        0
+      ],
+      "image": [
+        "77",
+        0
+      ]
+    },
+    "class_type": "ImageUpscaleWithModel",
+    "_meta": {
+      "title": "Upscale Image (using Model)"
+    }
+  },
+  "79": {
+    "inputs": {
+      "images": [
+        "78",
+        0
+      ]
+    },
+    "class_type": "SaveImageWebsocket",
+    "_meta": {
+      "title": "SaveImageWebsocket"
+    }
+  },
+  "80": {
+    "inputs": {
+      "images": [
+        "16",
+        0
+      ]
+    },
+    "class_type": "SaveImageWebsocket",
+    "_meta": {
+      "title": "SaveImageWebsocket"
     }
   }
 }

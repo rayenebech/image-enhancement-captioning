@@ -5,7 +5,7 @@ prompt: |
   Verilen prompt ve resimden önemli bilgileri çıkararak aşağıdaki yaml formatında yaz:
     ```yaml
     entity_name: ingilizce dilinde bir veya iki kelimeden oluşuyor. Ürün ne olduğunu tanımlar.
-    product_name: kesinlike türkçe dilinde ürün ismi, kesinlike marka ismi (varsa) ve diğer önemli özellikleri yansıtan net ve öz bir başlık.
+    product_title: kesinlike türkçe dilinde ürün ismi, prompt ile birebir olmamalı ve kesinlike marka ismi (varsa) ve diğer önemli özellikleri yansıtan net ve öz bir başlık.
     product_description: kesinlike türkçe dilinde temel ürün bilgilerini (boyut, renk, malzeme, ağırlık), kullanım talimatlarını (varsa), depolama bilgilerini (varsa) v.b. bilgileri içermelidir.
   <product_title> ve <product_description>, bir e-ticaret sitesinde paylaşılmaya uygun olmalıdır. kesinlikle aşağıdaki örneklerde verilen formatta yaz.
   ```
@@ -20,13 +20,43 @@ prompt: |
   ```
   
   Örnek 2:
-    prompt: 1 kg antep fıstık, kilitli ambalaj ile taze kalır.
+    prompt: 100% pamuklı kot pantalon
   ```yaml
-  entity_name: packet
-  product_title: Karlıoğlu Ana Çıtlak Antep Fıstığı - 1kg
-  product_description: Kilitli kağıt ambalaj ile birlikte gelen Karlıoğlu Ana Çıtlak Antep Fıstığı’nın ambalajını her tüketim sonrası zahmetsizce kapatabilir, hava almasını önleyerek taze kalmasını sağlayabilirsiniz. Bu taze ve lezzetli Antep fıstığı ürününü aileniz ve sevdikleriniz ile birlikte güvenle tüketebilirsiniz.
+  entity_name: pants
+    product_title: Mavi Slim Fit Pamuklu Kot Pantolon.
+    product_description: Bu slim fit kesime sahip Mavi kot pantolon, %100 pamuklu kumaşı ile hem rahat hem şık bir kullanım sunar. farklı bedenlere sahio olup, günlük giyimde mükemmel bir tercih olarak dolabınızda yer alacak. Kolayca kombinlenebilir ve dört mevsim boyunca kullanabilirsiniz.
+
   ```
   
+
+en_prompt: |
+  Extract key information from the given prompt and image and write in the following yaml format:
+    ```yaml
+    entity_name: consists of one or two words. Describes what the product is.
+    product_title: must be a clear and concise title reflecting the product name, it should be slightly different from the prompt, definitely including the brand name (if any) and other important features.
+    product_description: must include basic product information (size, color, material, weight), usage instructions (if any), storage information (if any), etc.
+  <product_title> and <product_description> should be suitable for sharing on an e-commerce site and must be written in the format given in the examples below.
+  ````
+  
+  Example 1: 
+  prompt: 700 grams of rosehip marmalade, 100% natural, store in the fridge after opening.
+  ```yaml
+  entity_name: jar
+  product_title: %100 Ganik Doğal Kuşburnu Marmelatı - 700g
+  product_description: This 700-gram jar of 100% natural rosehip marmalade contains no additives and offers pure fruit flavor.
+  To preserve its freshness, store it in the refrigerator after opening. Enjoy it with your breakfasts and desserts.
+  ```
+  
+  Example 2: 
+  prompt: 100% cotton jeans.
+  ```yaml
+    entity_name: pants
+    product_title: Blue Slim Fit Cotton Jeans
+    product_description: These slim-fit blue jeans are made from 100% cotton, offering both comfort and style. Available in various sizes, they will be a perfect addition to your wardrobe for everyday wear. Easily combinable and suitable for all four seasons.
+
+  ```
+
+
 
 
   

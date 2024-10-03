@@ -10,13 +10,12 @@ class VLMModel():
         self.device = "cuda" if torch.cuda.is_available() else "cpu"
         self.model = MllamaForConditionalGeneration.from_pretrained(
             kwargs.get("model_id"),
-            torch_dtype=torch.bfloat16,
-            device_map="auto",
+            torch_dtype=torch.bfloat16
         )
         self.processor = AutoProcessor.from_pretrained(kwargs.get("model_id"))
 
     def generate(self, prompt, image):
-        self.model.to("cuda")
+        self.model.to(self.device)
         messages = [
             {"role": "user", "content": [
                 {"type": "image"},
@@ -24,14 +23,14 @@ class VLMModel():
             ]}
         ]
         input_text = self.processor.apply_chat_template(messages, add_generation_prompt=True)
+        input_text += "```yaml"
         inputs = self.processor(image, input_text, return_tensors="pt").to(self.device)
-
-        output = self.model.generate(**inputs, max_new_tokens=700, min_p=0.1)
+        output = self.model.generate(**inputs, max_new_tokens=700, min_p=0.15)
         decoded_output =  self.processor.decode(output[0])[len(input_text)-1:]
         try:
             self.model.to("cpu")
-        except exception as e:
-            print(e)
+        except Excpetion as e:
+            print(str(e))
         torch.cuda.empty_cache()
         gc.collect()
         return decoded_output.replace("|end_header_id|>", "").replace("<|eot_id|>", "")

@@ -12,6 +12,7 @@ import io
 from model import VLMModel
 from helpers import read_config, parse_product_info
 from comfyui import ComfyUIHandler
+from audio_transcriber import AudioTranscriber
 
 config = read_config()
 warnings.filterwarnings('ignore')
@@ -21,6 +22,19 @@ st.set_page_config(
     page_icon="🚀",
     layout= "wide",
     )
+
+def scale_image(image, max_size=1024):
+    """Scale down image if it's larger than max_size while preserving aspect ratio"""
+    width, height = image.size
+    
+    if width > max_size or height > max_size:
+        ratio = min(max_size/width, max_size/height)
+        new_size = (int(width * ratio), int(height * ratio))
+        
+        image_copy = image.copy()
+        image_copy.thumbnail(new_size, Image.Resampling.LANCZOS)
+        return image_copy
+    return image
 
 def generate_image(data, image):
     try:
@@ -36,24 +50,60 @@ def generate_image(data, image):
         logger.error(f"Error in generate_image: {e}")
         return image
 
-def speech_to_text(audio_data):
-    return "yerli üretim"
+def process_audio():
+    if st.session_state.audio_recorder_output:
+        audio_bytes = st.session_state.audio_recorder_output['bytes']
+        audio_bio = io.BytesIO(audio_bytes)
+        audio_text, audio_language = audio_transcriber(audio_bio)
+        st.session_state.transcribed_text = audio_text
+        st.session_state.audio_language = audio_language
     
+output_image_placeholder = None
+input_image_placeholder = None
+title_placeholder = None
+title_placeholder_text = None
+desc_placeholder = None
+desc_placeholder_text = None
+image_enhanced = None
+image_path = None
+
 def reset():
-    output_image_placeholder.empty()
-    input_image_placeholder.empty()
-    title_placeholder.empty()
-    title_placeholder_text.empty()
-    desc_placeholder.empty()
-    desc_placeholder_text.empty()
+    if output_image_placeholder is not None:
+        output_image_placeholder.empty()
+    if input_image_placeholder is not None:
+        input_image_placeholder.empty()
+    if title_placeholder is not None:
+        title_placeholder.empty()
+    if title_placeholder_text is not None:
+        title_placeholder_text.empty()
+    if desc_placeholder is not None:
+        desc_placeholder.empty()
+    if desc_placeholder_text is not None:
+        desc_placeholder_text.empty()
+
     st.session_state["file_key"] += 1
     image_enhanced = None
     image_path = None
+    
+def change_lang():
+    if st.session_state.lang == "English":
+        st.session_state["prompt"] = config["en_prompt"]
+    
+    elif st.session_state.lang == "Türkçe":
+        st.session_state["prompt"] = config["prompt"]
+        
+    print("prompt is: ")
+    print(st.session_state["prompt"])
 
 model = VLMModel(model_id = config["model"]["model_id"])
 comfy_handler = ComfyUIHandler(server_address="127.0.0.1:8188", workflow_path="workflow.json")
+audio_transcriber = AudioTranscriber(
+    model_path="deepdml/faster-whisper-large-v3-turbo-ct2",
+    device="cuda"
+)
 
 st.title("Teknofest-Trendyol Hackathon - Cogitators ✨")
+default_prompt= config["prompt"]
 
 if 'button_pressed' not in st.session_state:
         st.session_state.button_pressed = False
@@ -63,34 +113,50 @@ if 'image_generated' not in st.session_state:
 
 if "file_key" not in st.session_state:
     st.session_state["file_key"] = 0
-    
-with st.container():  #container for the text 
-    col1, col2 = st.columns(2)
-    with col1: 
-        audio = mic_recorder(
-            start_prompt="Ses kaydını başlat 🎙️",
-            stop_prompt="Ses kaydını durdur 🛑",
-            just_once=False,
-            use_container_width=False,
-            format="webm",
-            callback=None,
-            args=(),
-            kwargs={},
-            key=None
-        )
-        user_desc = st.text_input("Lütfen, ürün açıklaması buraya yazın.", key= "input")
 
-        if audio is not None:
-            audio_bio = io.BytesIO(audio['bytes'])
-            audio_text = speech_to_text(audio_bio)
-            print(audio_bio)
-            print(type(audio_bio))
-            prompt  = config["prompt"] + f"\n prompt: {audio_text}"
+if not "prompt" in st.session_state:
+    st.session_state["prompt"] = config["prompt"]
+    
+with st.container():
+    col1, col2 = st.columns(2)
+    with col1:
+        col7, col8  = st.columns(2)
+        with col7:
+            mic_recorder(
+                key="audio_recorder",
+                start_prompt="Ses kaydını başlat 🎙️",
+                stop_prompt="Ses kaydını durdur 🛑",
+                just_once=False,
+                use_container_width=False,
+                callback=process_audio
+            )
+        with col8:
+            language = st.selectbox(
+                "Dil Seçiniz",
+                ("Türkçe", "English"),
+                 key='lang',
+                on_change=change_lang
+            )
+
+        if 'transcribed_text' in st.session_state:
+            st.text("👂 Dediğinizi şöyle duyduk:")
+            st.write(st.session_state.transcribed_text)
+            if st.session_state.audio_language == "en":
+                st.session_state["prompt"] = config["en_prompt"]
+            else:
+                st.session_state["prompt"] = config["prompt"]
+        
+        user_desc = st.text_input("Lütfen, ürün açıklaması buraya yazın.", key="input")
+        
+        if 'transcribed_text' in st.session_state:
+            prompt = st.session_state["prompt"] + f"\n prompt: {st.session_state.transcribed_text}"
         else:
-            prompt  = config["prompt"] + f"\n prompt: {user_desc}"
+            prompt = st.session_state["prompt"] + f"\n prompt: {user_desc}"
+        
         image_path = st.file_uploader("Ürün foroğrafı buraya yükleyin", type=["png","jpg","bmp","jpeg"], key=st.session_state["file_key"])
         if image_path is not None:
-            image =Image.open(image_path)
+            image = Image.open(image_path)
+            image = scale_image(image, max_size=1024)
         col5, col6 = st.columns(2)
         with col5:
             button = st.button("Başla 🚀", disabled=st.session_state.button_pressed, use_container_width= True)
