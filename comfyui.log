@@ -1,0 +1,210 @@
+2024-10-03 04:57:12,579 - accelerate.utils.modeling - INFO - We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
+2024-10-03 04:57:12,661 - accelerate.utils.modeling - WARNING - The model weights are not tied. Please use the `tie_weights` method before using the `infer_auto_device` function.
+2024-10-03 04:58:40,161 - ComfyUI - INFO - Successfully uploaded image: input_590cc547-c430-4ed0-b434-70c5d638a2e8.png
+2024-10-03 04:58:40,162 - ComfyUI - ERROR - Failed to update workflow node: '15'
+2024-10-03 04:58:40,162 - ComfyUI - ERROR - Error in modify_workflow: Workflow structure mismatch: '15'
+2024-10-03 04:58:40,163 - ComfyUI - ERROR - Error in generate_enhanced_image: Workflow structure mismatch: '15'
+2024-10-03 05:01:06,214 - ComfyUI - INFO - Successfully uploaded image: input_52372d73-5a90-430e-952f-327e8bc165be.png
+2024-10-03 05:01:06,215 - ComfyUI - WARNING - Missing product information in model output
+2024-10-03 05:01:06,215 - ComfyUI - INFO - Updated image path to: input_52372d73-5a90-430e-952f-327e8bc165be.png
+2024-10-03 05:01:06,216 - ComfyUI - INFO - Updated GroundingDino prompt to: generic product
+2024-10-03 05:01:06,216 - ComfyUI - INFO - Updated CLIP Text Encode prompt to: generic title with blue background, professional product photography, studio lighting
+2024-10-03 05:01:06,220 - ComfyUI - INFO - Successfully queued prompt with ID: 578ec81d-dbf7-45be-9e55-ed92969d68fd
+2024-10-03 05:01:06,222 - ComfyUI - INFO - WebSocket connected, waiting for prompt 578ec81d-dbf7-45be-9e55-ed92969d68fd
+2024-10-03 05:01:16,857 - ComfyUI - INFO - Workflow completed for prompt 578ec81d-dbf7-45be-9e55-ed92969d68fd
+2024-10-03 05:01:16,862 - ComfyUI - INFO - Successfully retrieved result image for prompt 578ec81d-dbf7-45be-9e55-ed92969d68fd
+2024-10-03 05:05:27,701 - accelerate.utils.modeling - INFO - We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
+2024-10-03 05:05:27,781 - accelerate.utils.modeling - WARNING - The model weights are not tied. Please use the `tie_weights` method before using the `infer_auto_device` function.
+2024-10-03 05:06:48,805 - ComfyUI - INFO - Successfully uploaded image: input_54607316-b911-4608-a0d7-9e65711634b1.png
+2024-10-03 05:06:48,806 - ComfyUI - INFO - Updated image path to: input_54607316-b911-4608-a0d7-9e65711634b1.png
+2024-10-03 05:06:48,806 - ComfyUI - INFO - Updated GroundingDino prompt to: oil
+2024-10-03 05:06:48,806 - ComfyUI - INFO - Updated CLIP Text Encode prompt to: Zeytin Yağı - 250ml with grey background, professional product photography, studio lighting
+2024-10-03 05:06:48,810 - ComfyUI - INFO - Successfully queued prompt with ID: f847a660-1ee6-4955-8a88-40952eb9f33d
+2024-10-03 05:06:48,812 - ComfyUI - INFO - WebSocket connected, waiting for prompt f847a660-1ee6-4955-8a88-40952eb9f33d
+2024-10-03 05:06:59,463 - ComfyUI - INFO - Workflow completed for prompt f847a660-1ee6-4955-8a88-40952eb9f33d
+2024-10-03 05:06:59,467 - ComfyUI - INFO - Successfully retrieved result image for prompt f847a660-1ee6-4955-8a88-40952eb9f33d
+2024-10-03 05:13:32,434 - accelerate.utils.modeling - INFO - We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
+2024-10-03 05:13:32,515 - accelerate.utils.modeling - WARNING - The model weights are not tied. Please use the `tie_weights` method before using the `infer_auto_device` function.
+2024-10-03 05:14:16,900 - ComfyUI - INFO - Successfully uploaded image: input_750a403c-53e2-4db5-86ab-18428501e498.png
+2024-10-03 05:14:16,901 - ComfyUI - ERROR - Error in modify_workflow: name 'input_image' is not defined
+2024-10-03 05:14:16,901 - ComfyUI - ERROR - Error in generate_enhanced_image: name 'input_image' is not defined
+2024-10-03 05:17:15,207 - accelerate.utils.modeling - INFO - We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
+2024-10-03 05:17:15,287 - accelerate.utils.modeling - WARNING - The model weights are not tied. Please use the `tie_weights` method before using the `infer_auto_device` function.
+2024-10-03 05:23:00,994 - ComfyUI - INFO - Successfully uploaded image: input_b39e4d18-16ba-4bbf-bd61-c5f78bf2f5a0.png
+2024-10-03 05:23:00,995 - ColorUtils - ERROR - Error extracting dominant color: [Errno 2] No such file or directory: '/home/jupyter/streamlit_app/input_b39e4d18-16ba-4bbf-bd61-c5f78bf2f5a0.png'
+2024-10-03 05:23:00,995 - ColorUtils - WARNING - Failed to get dominant color, using fallback
+2024-10-03 05:23:00,995 - ComfyUI - INFO - Detected background color: white
+2024-10-03 05:23:00,996 - ComfyUI - INFO - Updated image path to: input_b39e4d18-16ba-4bbf-bd61-c5f78bf2f5a0.png
+2024-10-03 05:23:00,996 - ComfyUI - INFO - Updated GroundingDino prompt to: oil
+2024-10-03 05:23:00,996 - ComfyUI - INFO - Updated CLIP Text Encode prompt to: Zeytinyağı - 500ml with white background, professional product photography, studio lighting
+2024-10-03 05:23:01,000 - ComfyUI - INFO - Successfully queued prompt with ID: 1b96a7e7-92af-457a-a8f1-95ec07fcf1b1
+2024-10-03 05:23:01,001 - ComfyUI - INFO - WebSocket connected, waiting for prompt 1b96a7e7-92af-457a-a8f1-95ec07fcf1b1
+2024-10-03 05:23:11,689 - ComfyUI - INFO - Workflow completed for prompt 1b96a7e7-92af-457a-a8f1-95ec07fcf1b1
+2024-10-03 05:23:11,694 - ComfyUI - INFO - Successfully retrieved result image for prompt 1b96a7e7-92af-457a-a8f1-95ec07fcf1b1
+2024-10-03 05:24:39,263 - ComfyUI - INFO - Successfully uploaded image: input_c947a29d-8cf5-4bc9-95a4-c1d3c7259f43.png
+2024-10-03 05:24:39,264 - ColorUtils - ERROR - Error extracting dominant color: [Errno 2] No such file or directory: '/home/jupyter/streamlit_app/input_c947a29d-8cf5-4bc9-95a4-c1d3c7259f43.png'
+2024-10-03 05:24:39,264 - ColorUtils - WARNING - Failed to get dominant color, using fallback
+2024-10-03 05:24:39,264 - ComfyUI - INFO - Detected background color: white
+2024-10-03 05:24:39,264 - ComfyUI - INFO - Updated image path to: input_c947a29d-8cf5-4bc9-95a4-c1d3c7259f43.png
+2024-10-03 05:24:39,264 - ComfyUI - INFO - Updated GroundingDino prompt to: jar
+2024-10-03 05:24:39,264 - ComfyUI - INFO - Updated CLIP Text Encode prompt to: %100 Ganik Doğal Kuşburnu Marmelatı - 700g with white background, professional product photography, studio lighting
+2024-10-03 05:24:39,268 - ComfyUI - INFO - Successfully queued prompt with ID: 32ecd257-23c5-4d84-8534-1258995d7691
+2024-10-03 05:24:39,270 - ComfyUI - INFO - WebSocket connected, waiting for prompt 32ecd257-23c5-4d84-8534-1258995d7691
+2024-10-03 05:24:48,093 - ComfyUI - INFO - Workflow completed for prompt 32ecd257-23c5-4d84-8534-1258995d7691
+2024-10-03 05:24:48,098 - ComfyUI - INFO - Successfully retrieved result image for prompt 32ecd257-23c5-4d84-8534-1258995d7691
+2024-10-03 05:30:24,323 - accelerate.utils.modeling - INFO - We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
+2024-10-03 05:30:24,404 - accelerate.utils.modeling - WARNING - The model weights are not tied. Please use the `tie_weights` method before using the `infer_auto_device` function.
+2024-10-03 05:31:19,600 - ComfyUI - INFO - Successfully uploaded image: input_eb6218d0-fec7-446c-a46f-442861e91c06.png
+2024-10-03 05:31:19,708 - ColorUtils - INFO - Successfully extracted dominant color: (215, 205, 191)
+2024-10-03 05:31:19,708 - ColorUtils - ERROR - Error converting RGB to color name: module 'webcolors' has no attribute 'CSS3_HEX_TO_NAMES'
+2024-10-03 05:31:19,708 - ComfyUI - INFO - Detected background color: white
+2024-10-03 05:31:19,709 - ComfyUI - INFO - Updated image path to: input_eb6218d0-fec7-446c-a46f-442861e91c06.png
+2024-10-03 05:31:19,709 - ComfyUI - INFO - Updated GroundingDino prompt to: marmelat
+2024-10-03 05:31:19,709 - ComfyUI - INFO - Updated CLIP Text Encode prompt to: %100 Ganik Doğal Kuşburnu Marmelatı - 700g with white background, professional product photography, studio lighting
+2024-10-03 05:31:19,713 - ComfyUI - INFO - Successfully queued prompt with ID: 73dc4876-6491-4498-92aa-81862a7a4ee4
+2024-10-03 05:31:19,716 - ComfyUI - INFO - WebSocket connected, waiting for prompt 73dc4876-6491-4498-92aa-81862a7a4ee4
+2024-10-03 05:31:28,560 - ComfyUI - INFO - Workflow completed for prompt 73dc4876-6491-4498-92aa-81862a7a4ee4
+2024-10-03 05:31:28,565 - ComfyUI - INFO - Successfully retrieved result image for prompt 73dc4876-6491-4498-92aa-81862a7a4ee4
+2024-10-03 05:34:41,437 - accelerate.utils.modeling - INFO - We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
+2024-10-03 05:34:41,520 - accelerate.utils.modeling - WARNING - The model weights are not tied. Please use the `tie_weights` method before using the `infer_auto_device` function.
+2024-10-03 05:35:31,129 - ComfyUI - INFO - Successfully uploaded image: input_3a29e89c-5fc2-4437-9cd1-d910531fdf3f.png
+2024-10-03 05:35:31,236 - ColorUtils - INFO - Successfully extracted dominant color: (64, 39, 21)
+2024-10-03 05:35:31,236 - ColorUtils - ERROR - Error converting RGB to color name: too many values to unpack (expected 2)
+2024-10-03 05:35:31,237 - ComfyUI - INFO - Detected background color: white
+2024-10-03 05:35:31,238 - ComfyUI - WARNING - Missing product information in model output
+2024-10-03 05:35:31,238 - ComfyUI - INFO - Updated image path to: input_3a29e89c-5fc2-4437-9cd1-d910531fdf3f.png
+2024-10-03 05:35:31,238 - ComfyUI - INFO - Updated GroundingDino prompt to: generic product
+2024-10-03 05:35:31,238 - ComfyUI - INFO - Updated CLIP Text Encode prompt to: generic title with white background, professional product photography, studio lighting
+2024-10-03 05:35:31,243 - ComfyUI - INFO - Successfully queued prompt with ID: a88a6f87-04d0-4c1e-b339-7b78ffd7f5ba
+2024-10-03 05:35:31,245 - ComfyUI - INFO - WebSocket connected, waiting for prompt a88a6f87-04d0-4c1e-b339-7b78ffd7f5ba
+2024-10-03 05:35:40,442 - ComfyUI - INFO - Workflow completed for prompt a88a6f87-04d0-4c1e-b339-7b78ffd7f5ba
+2024-10-03 05:35:40,447 - ComfyUI - INFO - Successfully retrieved result image for prompt a88a6f87-04d0-4c1e-b339-7b78ffd7f5ba
+2024-10-03 05:39:07,017 - accelerate.utils.modeling - INFO - We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
+2024-10-03 05:39:07,096 - accelerate.utils.modeling - WARNING - The model weights are not tied. Please use the `tie_weights` method before using the `infer_auto_device` function.
+2024-10-03 05:39:58,322 - ComfyUI - INFO - Successfully uploaded image: input_e8af685f-125f-41fa-9831-f5f580ad0704.png
+2024-10-03 05:39:58,418 - ColorUtils - INFO - Successfully extracted dominant color: (215, 205, 191)
+2024-10-03 05:39:58,418 - ColorUtils - ERROR - Error converting RGB to color name: name 'hex_color' is not defined
+2024-10-03 05:39:58,418 - ComfyUI - INFO - Detected background color: white
+2024-10-03 05:39:58,419 - ComfyUI - INFO - Updated image path to: input_e8af685f-125f-41fa-9831-f5f580ad0704.png
+2024-10-03 05:39:58,419 - ComfyUI - INFO - Updated GroundingDino prompt to: marmelat
+2024-10-03 05:39:58,420 - ComfyUI - INFO - Updated CLIP Text Encode prompt to: Ganik Kuşburnu Marmelatı - 700g with white background, professional product photography, studio lighting
+2024-10-03 05:39:58,424 - ComfyUI - INFO - Successfully queued prompt with ID: 92a3ed67-d9ed-4675-a35f-16cacf966597
+2024-10-03 05:39:58,426 - ComfyUI - INFO - WebSocket connected, waiting for prompt 92a3ed67-d9ed-4675-a35f-16cacf966597
+2024-10-03 05:40:07,171 - ComfyUI - INFO - Workflow completed for prompt 92a3ed67-d9ed-4675-a35f-16cacf966597
+2024-10-03 05:40:07,176 - ComfyUI - INFO - Successfully retrieved result image for prompt 92a3ed67-d9ed-4675-a35f-16cacf966597
+2024-10-03 05:40:43,251 - accelerate.utils.modeling - INFO - We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
+2024-10-03 05:40:43,335 - accelerate.utils.modeling - WARNING - The model weights are not tied. Please use the `tie_weights` method before using the `infer_auto_device` function.
+2024-10-03 05:42:19,730 - ComfyUI - INFO - Successfully uploaded image: input_6a5f2eeb-d821-4803-8dc0-0af8df231381.png
+2024-10-03 05:42:19,835 - ColorUtils - INFO - Successfully extracted dominant color: (254, 254, 254)
+2024-10-03 05:42:19,837 - ColorUtils - INFO - Found nearest color name: white
+2024-10-03 05:42:19,837 - ComfyUI - INFO - Detected background color: white
+2024-10-03 05:42:19,838 - ComfyUI - INFO - Updated image path to: input_6a5f2eeb-d821-4803-8dc0-0af8df231381.png
+2024-10-03 05:42:19,838 - ComfyUI - INFO - Updated GroundingDino prompt to: extract
+2024-10-03 05:42:19,838 - ComfyUI - INFO - Updated CLIP Text Encode prompt to: Zühre Ana Karadut Özü ve Black Mulberry Extract with white background, professional product photography, studio lighting
+2024-10-03 05:42:19,843 - ComfyUI - INFO - Successfully queued prompt with ID: b17e0baf-cbf1-435e-bd45-23d8b4204e5d
+2024-10-03 05:42:19,845 - ComfyUI - INFO - WebSocket connected, waiting for prompt b17e0baf-cbf1-435e-bd45-23d8b4204e5d
+2024-10-03 05:42:45,161 - ComfyUI - INFO - Successfully uploaded image: input_630f5515-8816-4a58-baf9-3818047ec85d.png
+2024-10-03 05:42:45,260 - ColorUtils - INFO - Successfully extracted dominant color: (215, 205, 191)
+2024-10-03 05:42:45,261 - ColorUtils - INFO - Found nearest color name: lightgrey
+2024-10-03 05:42:45,261 - ComfyUI - INFO - Detected background color: lightgrey
+2024-10-03 05:42:45,262 - ComfyUI - INFO - Updated image path to: input_630f5515-8816-4a58-baf9-3818047ec85d.png
+2024-10-03 05:42:45,262 - ComfyUI - INFO - Updated GroundingDino prompt to: marmelade
+2024-10-03 05:42:45,262 - ComfyUI - INFO - Updated CLIP Text Encode prompt to: Ganik Kuşburnu Marmelatı - 700g with lightgrey background, professional product photography, studio lighting
+2024-10-03 05:42:45,266 - ComfyUI - INFO - Successfully queued prompt with ID: b8fb52cb-4439-4d6e-bcaf-3571843cede2
+2024-10-03 05:42:45,268 - ComfyUI - INFO - WebSocket connected, waiting for prompt b8fb52cb-4439-4d6e-bcaf-3571843cede2
+2024-10-03 05:42:45,642 - ComfyUI - INFO - Workflow completed for prompt b17e0baf-cbf1-435e-bd45-23d8b4204e5d
+2024-10-03 05:42:45,661 - ComfyUI - INFO - Successfully retrieved result image for prompt b17e0baf-cbf1-435e-bd45-23d8b4204e5d
+2024-10-03 05:42:54,130 - ComfyUI - INFO - Workflow completed for prompt b8fb52cb-4439-4d6e-bcaf-3571843cede2
+2024-10-03 05:42:54,134 - ComfyUI - INFO - Successfully retrieved result image for prompt b8fb52cb-4439-4d6e-bcaf-3571843cede2
+2024-10-03 05:47:29,674 - ComfyUI - INFO - Successfully uploaded image: input_f6428f56-a0ef-45a4-b422-d2493d3393f7.png
+2024-10-03 05:47:29,816 - ColorUtils - INFO - Successfully extracted dominant color: (32, 35, 33)
+2024-10-03 05:47:29,818 - ColorUtils - INFO - Found nearest color name: midnightblue
+2024-10-03 05:47:29,818 - ComfyUI - INFO - Detected background color: midnightblue
+2024-10-03 05:47:29,818 - ComfyUI - WARNING - Missing product information in model output
+2024-10-03 05:47:29,819 - ComfyUI - INFO - Updated image path to: input_f6428f56-a0ef-45a4-b422-d2493d3393f7.png
+2024-10-03 05:47:29,819 - ComfyUI - INFO - Updated GroundingDino prompt to: generic product
+2024-10-03 05:47:29,819 - ComfyUI - INFO - Updated CLIP Text Encode prompt to: generic title with midnightblue background, professional product photography, studio lighting
+2024-10-03 05:47:29,824 - ComfyUI - INFO - Successfully queued prompt with ID: ab13ca23-0c84-415a-82ad-d8072c9f8d30
+2024-10-03 05:47:29,826 - ComfyUI - INFO - WebSocket connected, waiting for prompt ab13ca23-0c84-415a-82ad-d8072c9f8d30
+2024-10-03 05:47:43,295 - ComfyUI - INFO - Workflow completed for prompt ab13ca23-0c84-415a-82ad-d8072c9f8d30
+2024-10-03 05:47:43,299 - ComfyUI - INFO - Successfully retrieved result image for prompt ab13ca23-0c84-415a-82ad-d8072c9f8d30
+2024-10-03 05:56:38,318 - ComfyUI - INFO - Successfully uploaded image: input_c6d703a6-9cee-462c-92e5-eef4f08aeb29.png
+2024-10-03 05:56:38,422 - ColorUtils - INFO - Successfully extracted dominant color: (208, 203, 201)
+2024-10-03 05:56:38,423 - ColorUtils - INFO - Found nearest color name: lightgrey
+2024-10-03 05:56:38,423 - ComfyUI - INFO - Detected background color: lightgrey
+2024-10-03 05:56:38,424 - ComfyUI - INFO - Updated image path to: input_c6d703a6-9cee-462c-92e5-eef4f08aeb29.png
+2024-10-03 05:56:38,424 - ComfyUI - INFO - Updated GroundingDino prompt to: wallet
+2024-10-03 05:56:38,424 - ComfyUI - INFO - Updated CLIP Text Encode prompt to: Deri Cuzdan - Kafe Kahverengi with lightgrey background, professional product photography, studio lighting
+2024-10-03 05:56:38,429 - ComfyUI - INFO - Successfully queued prompt with ID: d1b7bf71-316b-4a13-9d8d-d8f597632622
+2024-10-03 05:56:38,431 - ComfyUI - INFO - WebSocket connected, waiting for prompt d1b7bf71-316b-4a13-9d8d-d8f597632622
+2024-10-03 05:56:45,182 - ComfyUI - INFO - Workflow completed for prompt d1b7bf71-316b-4a13-9d8d-d8f597632622
+2024-10-03 05:56:45,187 - ComfyUI - INFO - Successfully retrieved result image for prompt d1b7bf71-316b-4a13-9d8d-d8f597632622
+2024-10-03 05:58:58,182 - ComfyUI - INFO - Successfully uploaded image: input_7985a504-4423-4170-bca3-7facf4897251.png
+2024-10-03 05:58:58,276 - ColorUtils - INFO - Successfully extracted dominant color: (208, 203, 201)
+2024-10-03 05:58:58,277 - ColorUtils - INFO - Found nearest color name: lightgrey
+2024-10-03 05:58:58,278 - ComfyUI - INFO - Detected background color: lightgrey
+2024-10-03 05:58:58,278 - ComfyUI - INFO - Updated image path to: input_7985a504-4423-4170-bca3-7facf4897251.png
+2024-10-03 05:58:58,279 - ComfyUI - INFO - Updated GroundingDino prompt to: wallet
+2024-10-03 05:58:58,279 - ComfyUI - INFO - Updated CLIP Text Encode prompt to: De'M Enzo Brown Cüzdan - 10 Kartlı with lightgrey background, professional product photography, studio lighting
+2024-10-03 05:58:58,283 - ComfyUI - INFO - Successfully queued prompt with ID: f38f4900-160b-4d48-958e-d15a932acc19
+2024-10-03 05:58:58,285 - ComfyUI - INFO - WebSocket connected, waiting for prompt f38f4900-160b-4d48-958e-d15a932acc19
+2024-10-03 05:59:07,631 - ComfyUI - INFO - Workflow completed for prompt f38f4900-160b-4d48-958e-d15a932acc19
+2024-10-03 05:59:07,636 - ComfyUI - INFO - Successfully retrieved result image for prompt f38f4900-160b-4d48-958e-d15a932acc19
+2024-10-03 06:06:03,747 - accelerate.utils.modeling - INFO - We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
+2024-10-03 06:06:03,828 - accelerate.utils.modeling - WARNING - The model weights are not tied. Please use the `tie_weights` method before using the `infer_auto_device` function.
+2024-10-03 06:10:17,320 - accelerate.utils.modeling - INFO - We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
+2024-10-03 06:10:17,400 - accelerate.utils.modeling - WARNING - The model weights are not tied. Please use the `tie_weights` method before using the `infer_auto_device` function.
+2024-10-03 06:14:47,289 - ComfyUI - INFO - Successfully uploaded image: input_e8ea2407-b5cc-4b18-ab9c-58b42f027608.png
+2024-10-03 06:14:47,433 - ColorUtils - INFO - Successfully extracted dominant color: (208, 203, 201)
+2024-10-03 06:14:47,434 - ColorUtils - INFO - Found nearest color name: lightgrey
+2024-10-03 06:14:47,434 - ComfyUI - INFO - Detected background color: lightgrey
+2024-10-03 06:14:47,435 - ComfyUI - INFO - Updated image path to: input_e8ea2407-b5cc-4b18-ab9c-58b42f027608.png
+2024-10-03 06:14:47,435 - ComfyUI - INFO - Updated GroundingDino prompt to: wallet
+2024-10-03 06:14:47,435 - ComfyUI - INFO - Updated CLIP Text Encode prompt to: wallet with lightgrey background, professional product photography, studio lighting
+2024-10-03 06:14:47,440 - ComfyUI - INFO - Successfully queued prompt with ID: 24029c80-4dcd-4f2c-8ae2-e00014f98174
+2024-10-03 06:14:47,442 - ComfyUI - INFO - WebSocket connected, waiting for prompt 24029c80-4dcd-4f2c-8ae2-e00014f98174
+2024-10-03 06:14:56,627 - ComfyUI - INFO - Workflow completed for prompt 24029c80-4dcd-4f2c-8ae2-e00014f98174
+2024-10-03 06:14:56,631 - ComfyUI - INFO - Successfully retrieved result image for prompt 24029c80-4dcd-4f2c-8ae2-e00014f98174
+2024-10-03 06:24:29,454 - accelerate.utils.modeling - INFO - We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
+2024-10-03 06:24:29,534 - accelerate.utils.modeling - WARNING - The model weights are not tied. Please use the `tie_weights` method before using the `infer_auto_device` function.
+2024-10-03 06:30:19,277 - accelerate.utils.modeling - INFO - We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
+2024-10-03 06:30:19,352 - accelerate.utils.modeling - WARNING - The model weights are not tied. Please use the `tie_weights` method before using the `infer_auto_device` function.
+2024-10-03 06:30:24,136 - accelerate.big_modeling - WARNING - Some parameters are on the meta device because they were offloaded to the cpu.
+2024-10-03 06:37:17,994 - accelerate.utils.modeling - INFO - We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
+2024-10-03 06:37:18,076 - accelerate.utils.modeling - WARNING - The model weights are not tied. Please use the `tie_weights` method before using the `infer_auto_device` function.
+2024-10-03 06:38:22,525 - accelerate.utils.modeling - INFO - We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
+2024-10-03 06:38:22,607 - accelerate.utils.modeling - WARNING - The model weights are not tied. Please use the `tie_weights` method before using the `infer_auto_device` function.
+2024-10-03 06:42:34,645 - accelerate.utils.modeling - INFO - We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
+2024-10-03 06:42:34,725 - accelerate.utils.modeling - WARNING - The model weights are not tied. Please use the `tie_weights` method before using the `infer_auto_device` function.
+2024-10-03 06:44:42,316 - accelerate.utils.modeling - INFO - We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
+2024-10-03 06:44:42,397 - accelerate.utils.modeling - WARNING - The model weights are not tied. Please use the `tie_weights` method before using the `infer_auto_device` function.
+2024-10-03 06:46:08,568 - accelerate.utils.modeling - INFO - We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
+2024-10-03 06:46:08,648 - accelerate.utils.modeling - WARNING - The model weights are not tied. Please use the `tie_weights` method before using the `infer_auto_device` function.
+2024-10-03 06:57:15,918 - accelerate.utils.modeling - INFO - We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
+2024-10-03 06:57:16,008 - accelerate.utils.modeling - WARNING - The model weights are not tied. Please use the `tie_weights` method before using the `infer_auto_device` function.
+2024-10-03 06:58:09,547 - accelerate.utils.modeling - INFO - We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
+2024-10-03 06:58:09,629 - accelerate.utils.modeling - WARNING - The model weights are not tied. Please use the `tie_weights` method before using the `infer_auto_device` function.
+2024-10-03 06:58:49,947 - ComfyUI - INFO - Successfully uploaded image: input_5d735ecd-1432-4458-ab79-9971e0d17bab.png
+2024-10-03 06:58:50,057 - ColorUtils - INFO - Successfully extracted dominant color: (254, 254, 254)
+2024-10-03 06:58:50,058 - ColorUtils - INFO - Found nearest color name: white
+2024-10-03 06:58:50,059 - ComfyUI - INFO - Detected background color: white
+2024-10-03 06:58:50,059 - ComfyUI - INFO - Updated image path to: input_5d735ecd-1432-4458-ab79-9971e0d17bab.png
+2024-10-03 06:58:50,059 - ComfyUI - INFO - Updated GroundingDino prompt to: extract
+2024-10-03 06:58:50,059 - ComfyUI - INFO - Updated CLIP Text Encode prompt to: extract with white background, professional product photography, studio lighting
+2024-10-03 06:58:50,064 - ComfyUI - INFO - Successfully queued prompt with ID: 9675bb6c-0cf1-482b-b1a3-ae2547002ba0
+2024-10-03 06:58:50,066 - ComfyUI - INFO - WebSocket connected, waiting for prompt 9675bb6c-0cf1-482b-b1a3-ae2547002ba0
+2024-10-03 06:59:11,205 - ComfyUI - INFO - Workflow completed for prompt 9675bb6c-0cf1-482b-b1a3-ae2547002ba0
+2024-10-03 06:59:11,210 - ComfyUI - INFO - Successfully retrieved result image for prompt 9675bb6c-0cf1-482b-b1a3-ae2547002ba0
+2024-10-03 07:00:52,885 - ComfyUI - INFO - Successfully uploaded image: input_1f87b6f4-3de7-45d5-b05f-1241a68d8651.png
+2024-10-03 07:00:53,002 - ColorUtils - INFO - Successfully extracted dominant color: (254, 254, 254)
+2024-10-03 07:00:53,003 - ColorUtils - INFO - Found nearest color name: white
+2024-10-03 07:00:53,004 - ComfyUI - INFO - Detected background color: white
+2024-10-03 07:00:53,004 - ComfyUI - INFO - Updated image path to: input_1f87b6f4-3de7-45d5-b05f-1241a68d8651.png
+2024-10-03 07:00:53,005 - ComfyUI - INFO - Updated GroundingDino prompt to: vegetable
+2024-10-03 07:00:53,005 - ComfyUI - INFO - Updated CLIP Text Encode prompt to: vegetable with white background, professional product photography, studio lighting
+2024-10-03 07:00:53,009 - ComfyUI - INFO - Successfully queued prompt with ID: f6e0b16d-50a9-4f97-836f-3ff91b1192d8
+2024-10-03 07:00:53,011 - ComfyUI - INFO - WebSocket connected, waiting for prompt f6e0b16d-50a9-4f97-836f-3ff91b1192d8
+2024-10-03 07:01:13,427 - ComfyUI - INFO - Workflow completed for prompt f6e0b16d-50a9-4f97-836f-3ff91b1192d8
+2024-10-03 07:01:13,431 - ComfyUI - INFO - Successfully retrieved result image for prompt f6e0b16d-50a9-4f97-836f-3ff91b1192d8
+2024-10-03 07:03:38,104 - accelerate.utils.modeling - INFO - We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
+2024-10-03 07:03:38,185 - accelerate.utils.modeling - WARNING - The model weights are not tied. Please use the `tie_weights` method before using the `infer_auto_device` function.

@@ -1,0 +1,377 @@
+{
+  "15": {
+    "inputs": {
+      "image": "YOUR_PATH.png",
+      "upload": "image"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  },
+  "16": {
+    "inputs": {
+      "mask": [
+        "22",
+        0
+      ]
+    },
+    "class_type": "MaskToImage",
+    "_meta": {
+      "title": "Convert Mask to Image"
+    }
+  },
+  "17": {
+    "inputs": {
+      "images": [
+        "16",
+        0
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "Preview Image"
+    }
+  },
+  "21": {
+    "inputs": {
+      "margin": 0.05,
+      "device": "cuda",
+      "checkpoint": [
+        "46",
+        0
+      ]
+    },
+    "class_type": "LoadBoxSegmenter",
+    "_meta": {
+      "title": "LoadBoxSegmenter"
+    }
+  },
+  "22": {
+    "inputs": {
+      "model": [
+        "21",
+        0
+      ],
+      "image": [
+        "15",
+        0
+      ],
+      "bbox": [
+        "41",
+        0
+      ]
+    },
+    "class_type": "BoxSegmenter",
+    "_meta": {
+      "title": "BoxSegmenter"
+    }
+  },
+  "23": {
+    "inputs": {
+      "images": [
+        "25",
+        0
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "Preview Image"
+    }
+  },
+  "25": {
+    "inputs": {
+      "blend_factor": 1,
+      "blend_mode": "multiply",
+      "image1": [
+        "16",
+        0
+      ],
+      "image2": [
+        "15",
+        0
+      ]
+    },
+    "class_type": "ImageBlend",
+    "_meta": {
+      "title": "ImageBlend"
+    }
+  },
+  "41": {
+    "inputs": {
+      "prompt": "bag",
+      "box_threshold": 0.25,
+      "text_threshold": 0.25,
+      "processor": [
+        "45",
+        0
+      ],
+      "model": [
+        "45",
+        1
+      ],
+      "image": [
+        "15",
+        0
+      ]
+    },
+    "class_type": "GroundingDino",
+    "_meta": {
+      "title": "GroundingDino"
+    }
+  },
+  "42": {
+    "inputs": {
+      "color": "red",
+      "width": 3,
+      "image": [
+        "15",
+        0
+      ],
+      "bbox": [
+        "41",
+        0
+      ]
+    },
+    "class_type": "DrawBoundingBox",
+    "_meta": {
+      "title": "DrawBoundingBox"
+    }
+  },
+  "43": {
+    "inputs": {
+      "images": [
+        "42",
+        0
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "Preview Image"
+    }
+  },
+  "44": {
+    "inputs": {
+      "repo_id": "IDEA-Research/grounding-dino-tiny",
+      "filename": "",
+      "revision": "main"
+    },
+    "class_type": "HfHubDownload",
+    "_meta": {
+      "title": "HfHubDownload"
+    }
+  },
+  "45": {
+    "inputs": {
+      "dtype": "float32",
+      "device": "cuda",
+      "checkpoint": [
+        "44",
+        0
+      ]
+    },
+    "class_type": "LoadGroundingDino",
+    "_meta": {
+      "title": "LoadGroundingDino"
+    }
+  },
+  "46": {
+    "inputs": {
+      "repo_id": "finegrain/finegrain-box-segmenter",
+      "filename": "model.safetensors",
+      "revision": "main"
+    },
+    "class_type": "HfHubDownload",
+    "_meta": {
+      "title": "HfHubDownload"
+    }
+  },
+  "48": {
+    "inputs": {
+      "model_name": "RealESRGAN_x4plus.pth"
+    },
+    "class_type": "UpscaleModelLoader",
+    "_meta": {
+      "title": "Load Upscale Model"
+    }
+  },
+  "51": {
+    "inputs": {
+      "upscale_model": [
+        "48",
+        0
+      ],
+      "image": [
+        "61",
+        0
+      ]
+    },
+    "class_type": "ImageUpscaleWithModel",
+    "_meta": {
+      "title": "Upscale Image (using Model)"
+    }
+  },
+  "54": {
+    "inputs": {
+      "text": "photo of a product displayed, photography, masterpiece, bright lighting, clear background",
+      "clip": [
+        "63",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Prompt)"
+    }
+  },
+  "55": {
+    "inputs": {
+      "text": "cgi, cartoon, anime, painting, crayon, noise",
+      "clip": [
+        "63",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Prompt)"
+    }
+  },
+  "58": {
+    "inputs": {
+      "grow_mask_by": 1,
+      "pixels": [
+        "25",
+        0
+      ],
+      "vae": [
+        "63",
+        2
+      ],
+      "mask": [
+        "64",
+        0
+      ]
+    },
+    "class_type": "VAEEncodeForInpaint",
+    "_meta": {
+      "title": "VAE Encode (for Inpainting)"
+    }
+  },
+  "60": {
+    "inputs": {
+      "seed": 18075065132903,
+      "steps": 75,
+      "cfg": 10,
+      "sampler_name": "uni_pc_bh2",
+      "scheduler": "normal",
+      "denoise": 0.95,
+      "model": [
+        "63",
+        0
+      ],
+      "positive": [
+        "54",
+        0
+      ],
+      "negative": [
+        "55",
+        0
+      ],
+      "latent_image": [
+        "58",
+        0
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "KSampler"
+    }
+  },
+  "61": {
+    "inputs": {
+      "samples": [
+        "60",
+        0
+      ],
+      "vae": [
+        "63",
+        2
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE Decode"
+    }
+  },
+  "63": {
+    "inputs": {
+      "ckpt_name": "512-inpainting-ema.safetensors"
+    },
+    "class_type": "CheckpointLoaderSimple",
+    "_meta": {
+      "title": "Load Checkpoint"
+    }
+  },
+  "64": {
+    "inputs": {
+      "mask": [
+        "22",
+        0
+      ]
+    },
+    "class_type": "InvertMask",
+    "_meta": {
+      "title": "InvertMask"
+    }
+  },
+  "69": {
+    "inputs": {
+      "images": [
+        "61",
+        0
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "Preview Image"
+    }
+  },
+  "70": {
+    "inputs": {
+      "images": [
+        "51",
+        0
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "Preview Image"
+    }
+  },
+  "75": {
+    "inputs": {
+      "images": [
+        "51",
+        0
+      ]
+    },
+    "class_type": "SaveImageWebsocket",
+    "_meta": {
+      "title": "SaveImageWebsocket"
+    }
+  },
+  "76": {
+    "inputs": {
+      "filename_prefix": "api_test_final",
+      "images": [
+        "51",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "Save Image"
+    }
+  }
+}
